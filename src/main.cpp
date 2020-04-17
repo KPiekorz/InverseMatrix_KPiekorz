@@ -14,9 +14,20 @@ int main() {
             {  4.9,     6.4,    13.2 }
     };
 
-    cout <<a;
+    Matrix <double> b(2,2,10); //2x2 matrix with each cell set to 10
+    b[1][1]=5;
+    b.AppendCol(100); //initialize each element of the new column with 100;
+    b.AppendRow(20);
 
-    cout<<"matrix a:\n"<<a<<endl;
+    cout << "matrix b:\n" << b << endl;
+
+    cout << "matrix a:\n" << a << endl;
+
+    /* There are also some linear algebra functions */
+    cout<<"The determinant of a is: "<<a.Det()<<endl;
+    cout<<"3*a=\n"<<3.0*a<<endl;
+    cout<<"The inverse of a is:\n"<<a.Inv()<<endl;
+    cout<<"a*b=:\n"<<a*b<<endl;
 
     return 0;
 }
