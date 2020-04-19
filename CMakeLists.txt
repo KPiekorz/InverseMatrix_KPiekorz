@@ -3,4 +3,4 @@ project(InverseMatrix_KPiekorz)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(InverseMatrix_KPiekorz src/main.cpp src/matrixlib.tpp inc/matrixlib.h src/pseudoinvmatrix.cpp inc/pseudoinvmatrix.h)
+add_executable(InverseMatrix_KPiekorz src/main.cpp src/matrixlib.tpp src/pseudoinvmatrix.tpp inc/matrixlib.h inc/pseudoinvmatrix.h)
