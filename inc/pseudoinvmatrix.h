@@ -15,16 +15,12 @@ class PseudoInvMatrix : public Matrix<T> {
 
 private:
 
+
 public:
     using Matrix<T>::Matrix;
 
-
-
     Matrix<T> Trans();
-
-    // funja sprawdzajaca kierunek mnozenia macierzy
-
-    // funkcja obliczajaca i zwracajaca pseudo inv matrix cos na wzor z inv
+    PseudoInv();
 
 };
 
