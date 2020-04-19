@@ -35,7 +35,8 @@ int main() {
 
     p[0][2] = 1;
     cout << p << endl;
-    p.Trans();
+    Matrix<int> mattrans = p.Trans();
+    cout << mattrans << endl;
 
     return 0;
 }
