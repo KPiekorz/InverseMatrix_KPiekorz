@@ -6,6 +6,9 @@
 #define INVERSEMATRIX_KPIEKORZ_PSEUDOINVMATRIX_H
 
 #include "matrixlib.h"
+#include <iostream>
+
+using namespace std;
 
 template <class T>
 class PseudoInvMatrix : public Matrix<T> {
@@ -13,7 +16,11 @@ class PseudoInvMatrix : public Matrix<T> {
 private:
 
 public:
-    // funkja wyliczajaca macierz trans i zwaracajaca nowa macierz
+    using Matrix<T>::Matrix;
+
+
+
+    Matrix<T> Trans();
 
     // funja sprawdzajaca kierunek mnozenia macierzy
 
@@ -21,5 +28,8 @@ public:
 
 };
 
+
+
+#include "../src/pseudoinvmatrix.tpp"
 
 #endif //INVERSEMATRIX_KPIEKORZ_PSEUDOINVMATRIX_H

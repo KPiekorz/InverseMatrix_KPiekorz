@@ -26,7 +26,7 @@ private:
     template <typename TE> friend std::ostream& operator<<(std::ostream &os, const Matrix<TE>& x);
     template <typename TE> friend std::istream& operator>>(std::istream &is, Matrix<TE>& x);
 
-
+protected:
     std::vector<std::vector<T>> mat;
     unsigned N;
     unsigned M;
@@ -136,7 +136,6 @@ public:
         return *this;
     }
 
-
     unsigned Rows() const { return N; }
     unsigned Cols() const { return M; }
 
@@ -147,7 +146,6 @@ public:
 
     static T Det(const Matrix<T>& x);
     static Matrix<T> LinSolve(const Matrix &A, const Matrix &b) { return A.Inv()*b; }
-
 
 };
 

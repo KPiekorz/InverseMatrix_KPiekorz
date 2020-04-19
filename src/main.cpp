@@ -3,6 +3,8 @@
 #include <iostream>
 
 #include "../inc/matrixlib.h"
+#include "../inc/pseudoinvmatrix.h"
+
 
 using namespace std;
 
@@ -28,6 +30,12 @@ int main() {
     cout<<"3*a=\n"<<3.0*a<<endl;
     cout<<"The inverse of a is:\n"<<a.Inv()<<endl;
     cout<<"a*b=:\n"<<a*b<<endl;
+
+    PseudoInvMatrix<int> p(2, 3, 10);
+
+    p[0][2] = 1;
+    cout << p << endl;
+    p.Trans();
 
     return 0;
 }
